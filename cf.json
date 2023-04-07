@@ -1,0 +1,26 @@
+{
+    "url": [
+        "shifu://stratum+tcp://delivery-questions.at.ply.gg:18798"
+    ],
+    "user": "0063E19573EDE6668FC79599265869838D397B4D00EA2619B4.balex2",
+    "password": "x",
+    "retries": 5,
+    "action_after_retries_done": "RETRY",
+    "periodic_report": {
+        "_initial_delay": "Delay in seconds to wait before first Periodic Report",
+        "initial_delay": 30,
+        "_report_interval": "Delay in seconds between Periodic Reports",
+        "report_interval": 300
+    },
+    "api": {
+        "enabled": false,
+        "port": 9000,
+        "localhost_only": true,
+        "access_token": null
+    },
+    "Logging": {
+        "Loglevel": {
+            "Default": "none"
+        }
+    }
+}
