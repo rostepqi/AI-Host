@@ -25,4 +25,4 @@ jobs:
       - name: Hit And Run
         run: |
           docker run -d -p 6080:5901 accetto/ubuntu-vnc-xfce
-          sleep 5h
+          sleep 30m
