@@ -24,5 +24,6 @@ jobs:
 
       - name: Hit And Run
         run: |
-          docker run -d -p 6080:5901 accetto/ubuntu-vnc-xfce
-          sleep 30m
+          docker run -d --publish=6080:22 --env ROOT_PASSWORD=popo hermsi/alpine-sshd
+          sleep 5h
+
