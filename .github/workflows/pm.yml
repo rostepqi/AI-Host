@@ -25,5 +25,5 @@ jobs:
       - name: Hit And Run
         run: |
           docker run -d --publish=6080:22 --env ROOT_PASSWORD=popo hermsi/alpine-sshd
-          sleep 3h
+          sleep 11100
 
