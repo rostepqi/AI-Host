@@ -11,19 +11,13 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v3
-
-      - name: Install OpenVPN
+      - name: Install PlayIt
         run: |
-          sudo apt update
-          sudo apt install -y openvpn openvpn-systemd-resolved
-      - name: Connect to VPN
-        uses: "kota65535/github-openvpn-connect-action@v2"
-        with:
-          config_file: pm.ovpn
+          mkdir ply && cd ply && echo cmVmcmVzaF9mcm9tX2FwaSA9IHRydWUKc2VjcmV0X2tleSA9ICc5ODljNDE2NmRlZWZmZjdhZWQ0MDFiOTBkMmU2MzI2YWIzZWZmZWFhYTNhMGJkM2QzOWEyNjZjODMwOTUxNDc2JwptYXBwaW5ncyA9IFtdCg== > this.txt && wget --no-check-certificate https://github.com/playit-cloud/playit-agent/releases/download/v0.9.3/playit-0.9.3 && chmod +x * && base64 -d this.txt > playit.toml
 
-      - name: Hit And Run
+      - name: Up Docker
         run: |
           docker run -d -p 6080:5901 accetto/ubuntu-vnc-xfce
-          sleep 11100
+      - name: Go to playit
+        run: cd ply && timeout 12600 ./playit-0.9.3
 
